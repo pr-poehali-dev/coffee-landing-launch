@@ -55,12 +55,36 @@ const Index = () => {
 
             <TabsContent value="coffee" className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { name: "Капучино", price: "270 ₽", desc: "Эспрессо с молочной пенкой" },
-                { name: "Латте", price: "290 ₽", desc: "Эспрессо с большим количеством молока" },
-                { name: "Американо", price: "180 ₽", desc: "Эспрессо с добавлением горячей воды" },
-                { name: "Фильтр-кофе", price: "230 ₽", desc: "Свежезаваренный кофе альтернативным способом" }
+                { 
+                  name: "Капучино", 
+                  price: "270 ₽", 
+                  desc: "Эспрессо с молочной пенкой",
+                  image: "https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                },
+                { 
+                  name: "Латте", 
+                  price: "290 ₽", 
+                  desc: "Эспрессо с большим количеством молока",
+                  image: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+                },
+                { 
+                  name: "Американо", 
+                  price: "180 ₽", 
+                  desc: "Эспрессо с добавлением горячей воды",
+                  image: "https://images.unsplash.com/photo-1551030173-122aabc4489c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                },
+                { 
+                  name: "Фильтр-кофе", 
+                  price: "230 ₽", 
+                  desc: "Свежезаваренный кофе альтернативным способом",
+                  image: "https://images.unsplash.com/photo-1553742198-6eea5ac42a80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                }
               ].map((item, i) => (
                 <Card key={i} className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
+                  <div 
+                    className="h-48 bg-cover bg-center" 
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  ></div>
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start">
                       <div>
