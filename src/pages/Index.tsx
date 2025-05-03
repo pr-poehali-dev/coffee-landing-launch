@@ -7,6 +7,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  // Функция для плавной прокрутки к форме бронирования
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById('booking');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F0E8]">
       {/* Навигация */}
@@ -35,7 +43,10 @@ const Index = () => {
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">АстроКофе</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Космическое удовольствие в каждой чашке</p>
-          <Button className="bg-[#D6A26D] hover:bg-[#AA7F53] text-white px-8 py-6 rounded-full text-lg">
+          <Button 
+            onClick={scrollToBooking}
+            className="bg-[#D6A26D] hover:bg-[#AA7F53] text-white px-8 py-6 rounded-full text-lg"
+          >
             Забронировать столик
           </Button>
         </div>
